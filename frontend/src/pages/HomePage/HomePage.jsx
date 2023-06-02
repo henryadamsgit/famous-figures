@@ -2,6 +2,8 @@ import React from "react";
 import "./HomePage.scss";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Card from "../../components/Card/Card";
+import SideNav from "../../components/SideNav/SideNav";
+import Footer from "../../components/Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -12,14 +14,13 @@ const HomePage = () => {
       </div>
       <div className="sideNav">
         <p>This is the SideNav</p>
+        <SideNav />
       </div>
       <div className="container">
         <p>This will contain the main body </p>
-        <Card/>
+        <Card />
       </div>
-      <div className="footer">
-        <p className="footer__heading">i am the footer</p>
-      </div>
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,38 @@
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__name {
+  font-size: 16px;
+}
+
+.footer__socials {
+  font-size: 20px;
+}
+
+.footer__socials a {
+  color: white;
+  margin-right: 10px;
+}
+
+.footer__socials a:hover {
+  color: #999999;
+}
+
+.footer__socials i {
+  margin-right: 5px;
+}
+.linkedin {
+  color: white;
+  position: absolute;
+}
+
+.github {
+  color: white;
+  position: absolute;
+}
