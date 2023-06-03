@@ -1,6 +1,5 @@
 import React from "react";
 import "./TopNav.scss";
-import SearchBar from "../SearchBar/SearchBar";
 
 const TopNav = () => {
   return (
@@ -14,7 +13,6 @@ const TopNav = () => {
         <p>About</p>
         <p>Contact</p>
       </div>
-      <SearchBar />
     </div>
   );
 };

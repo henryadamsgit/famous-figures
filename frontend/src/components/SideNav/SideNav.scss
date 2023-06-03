@@ -3,6 +3,17 @@
   flex-direction: column;
   gap: 10px;
 }
+.sideNav {
+  height: 85.5%;
+  width: 32vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 10px;
+  bottom: 0;
+  background-color: rgb(255, 208, 0);
+  border: 2px solid black;
+}
 
 .buttons__home,
 .buttons__figures,

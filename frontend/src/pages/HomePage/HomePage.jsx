@@ -4,6 +4,7 @@ import Card from "../../components/Card/Card";
 import SideNav from "../../components/SideNav/SideNav";
 import Footer from "../../components/Footer/Footer";
 import TopNav from "../../components/TopNav/TopNav";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 const HomePage = () => {
   return (
@@ -11,7 +12,7 @@ const HomePage = () => {
       <TopNav />
       <SideNav />
       <div className="container">
-        <p>Home</p>
+        <SearchBar />
         <Card />
       </div>
       <Footer />
