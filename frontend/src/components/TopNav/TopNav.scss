@@ -1,0 +1,45 @@
+.topNav {
+  width: 98%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 20px;
+  border-radius: 0 0 10px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.title {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu p {
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu p:hover {
+  color: #ffcc00;
+}
+
+.SearchBar {
+  margin-top: 10px;
+}

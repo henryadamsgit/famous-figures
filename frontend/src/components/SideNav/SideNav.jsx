@@ -1,19 +1,35 @@
 import React from "react";
+import Button from "../Button/Button";
+import "./SideNav.scss";
 
 const SideNav = () => {
   return (
     <div className="sideNav">
       <div className="buttons">
-        <p>All Figures</p>
-        <button>Click</button>
-        <p>By Category </p>
-        <button>Click</button>
-        <p>Scroll: Timeline</p>
-        <button>Click</button>
-        <p>Switch: Male/Female</p>
-        <button>Click</button>
-        <p>Switch: Alive/Dead</p>
-        <button>Click</button>
+        <div className="buttons__home">
+          <p>Home</p>
+          <Button />
+        </div>
+        <div className="buttons__figures">
+          <p>All Figures</p>
+          <Button />
+        </div>
+        <div className="buttons__cat">
+          <p>By Category </p>
+          <Button />
+        </div>
+        <div className="buttons__timeline">
+          <p>Scroll: Timeline</p>
+          <Button />
+        </div>
+        <div className="buttons__gender">
+          <p>Switch: Male/Female</p>
+          <Button />
+        </div>
+        <div className="buttons__alive">
+          <p>Switch: Alive/Dead</p>
+          <Button />
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,28 @@
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons__home,
+.buttons__figures,
+.buttons__cat,
+.buttons__timeline,
+.buttons__gender,
+.buttons__alive {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons p {
+  margin: 0;
+}
+
+.buttons__figures p,
+.buttons__cat p,
+.buttons__timeline p,
+.buttons__gender p,
+.buttons__alive p {
+  font-weight: bold;
+}
