@@ -1,7 +1,7 @@
 .figure {
   box-sizing: border-box;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -19,38 +19,15 @@
     white-space: nowrap;
     margin-bottom: auto;
   }
-
-  &__category {
-    font-size: 1.2rem;
-    color: #161616;
-    height: 80px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
   &__image {
-    width: 95%;
+    width: 200px;
     height: 200px;
     border-radius: 10px;
-    object-fit: contain;
+    object-fit: cover;
     margin-bottom: 10px;
     margin-top: auto;
-  }
-
-  &__biography {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: red;
-    margin-top: auto;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 28px;
+    border: 2px solid black;
   }
 }
 

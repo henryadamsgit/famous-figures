@@ -14,12 +14,12 @@ const SideNav = () => {
           <p>All Figures</p>
           <Button />
         </div>
-        <div className="buttons__cat">
-          <p>By Category </p>
+        <div className="buttons__nat">
+          <p>By Nationality </p>
           <Button />
         </div>
-        <div className="buttons__timeline">
-          <p>Scroll: Timeline</p>
+        <div className="buttons__era">
+          <p>By Era </p>
           <Button />
         </div>
         <div className="buttons__gender">

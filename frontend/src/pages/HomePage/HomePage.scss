@@ -13,23 +13,24 @@
   left: 15px;
   border: 2px solid green;
   bottom: 0;
-  background-color: grey;
+  background-color: rgb(94, 95, 96);
 }
 
 .container {
   height: 77%;
-  width: 81vw;
-  border: 2px solid blue;
-  top: 105px;
-  left: 255px;
+  width: 82.5vw;
+  border: 2px solid rgb(255, 0, 187);
+  top: 100px;
+  left: 240px;
   position: absolute;
+  background-color: black;
 }
 
 .footer {
-  width: 81vw;
+  width: 79.7vw;
   height: 50px;
   border: 2px solid black;
   position: absolute;
-  bottom: 1px;
-  left: 255px;
+  bottom: 0px;
+  left: 240px;
 }
