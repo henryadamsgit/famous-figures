@@ -1,10 +1,13 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
 .figure {
   box-sizing: border-box;
-  width: 300px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  width: 200px;
+  height: 200px;
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: #f1f0f0;
@@ -20,8 +23,8 @@
     margin-bottom: auto;
   }
   &__image {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 10px;
