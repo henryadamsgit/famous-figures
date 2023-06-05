@@ -4,7 +4,7 @@ import "./Button.scss";
 const Button = () => {
   return (
     <>
-      <button class="button" role="button">
+      <button className="button" role="button">
         Button{" "}
       </button>
     </>

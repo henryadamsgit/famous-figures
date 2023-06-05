@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface FamousFiguresRepository extends JpaRepository<Long, String> {
+public interface FamousFiguresRepository extends JpaRepository<FamousFigures, Long> {
 
 
     @Query(value = "SELECT id FROM famous_figures", nativeQuery = true)

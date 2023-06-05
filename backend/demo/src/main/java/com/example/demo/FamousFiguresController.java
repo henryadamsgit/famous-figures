@@ -11,6 +11,18 @@ public class FamousFiguresController {
 
     @Autowired
     FamousFiguresService famousFiguresService;
+
+
+
+
+    @GetMapping("/figures/ids")
+    public List<Long> getFiguresById() {
+        return famousFiguresService.getAllIds();
+    }
+}
+
+
+
 //
 //    // CREATE
 //    @PostMapping("/figures");
@@ -22,15 +34,6 @@ public class FamousFiguresController {
 //
 //    @GetMapping("/figures/all");
 //    @GetMapping("/figures/random");
-
-
-
-    @GetMapping("/figures/{id}")
-    public List<Long> getFiguresById() {
-        return famousFiguresService.getAllIds();
-    }
-}
-
 //
 //
 //    @GetMapping("/figures/dead");
