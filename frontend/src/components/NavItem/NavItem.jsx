@@ -1,10 +1,10 @@
 import React from "react";
 import "./NavItem.scss";
 
-const NavItem = ({ name}) => {
+const NavItem = ({ name }) => {
   return (
-    <div className="SideNavComponent">
-      <h3>{name}</h3>
+    <div className="navItem">
+      <h3 className="navItem__font">{name}</h3>
     </div>
   );
 };

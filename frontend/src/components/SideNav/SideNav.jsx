@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import NavItem from "../NavItem/NavItem";
 import "./SideNav.scss";
+import Line from "../../assets/images/nav-line.svg";
 
 const SideNav = () => {
   return (
@@ -9,15 +10,21 @@ const SideNav = () => {
         <div className="logo-container"></div>
         <div className="menu"></div>
 
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+
         <NavLink
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
-          to="/home"
+          to="/"
           style={{ textDecoration: "none" }}
         >
           <NavItem name="Home" />
         </NavLink>
+
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
 
         <NavLink
           className={({ isActive, isPending }) =>
@@ -29,15 +36,21 @@ const SideNav = () => {
           <NavItem name="All Figures" />
         </NavLink>
 
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+
         <NavLink
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
-          to="/category"
+          to="/category/:category"
           style={{ textDecoration: "none" }}
         >
           <NavItem name="By Category" />
         </NavLink>
+
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
 
         <NavLink
           className={({ isActive, isPending }) =>
@@ -49,25 +62,33 @@ const SideNav = () => {
           <NavItem name="By Era" />
         </NavLink>
 
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
-          to="/gender"
-          style={{ textDecoration: "none" }}
-        >
-          <NavItem name="Gender" />
-        </NavLink>
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
 
         <NavLink
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
-          to="/DeadOrAlive"
+          to="/alive"
           style={{ textDecoration: "none" }}
         >
-          <NavItem name="Dead/Alive" />
+          <NavItem name="Alive" />
         </NavLink>
+
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          to="/dead"
+          style={{ textDecoration: "none" }}
+        >
+          <NavItem name="Dead" />
+        </NavLink>
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
       </section>
     </>
   );

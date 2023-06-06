@@ -2,3 +2,12 @@
   text-decoration: none;
   color: inherit;
 }
+
+.main {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  margin-left: 20px;
+  position: relative;
+}

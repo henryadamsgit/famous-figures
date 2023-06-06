@@ -3,7 +3,7 @@ import "./SearchBar.scss";
 
 const SearchBar = ({ value, handleInput }) => {
   return (
-    <form action="" class="search-bar">
+    <form action="" className="search-bar">
       <input
         type="search"
         name="search"
@@ -12,7 +12,7 @@ const SearchBar = ({ value, handleInput }) => {
         value={value}
         onChange={handleInput}
       />
-      <button class="search-btn" type="submit">
+      <button className="search-btn" type="submit">
         <span>Search</span>
       </button>
     </form>

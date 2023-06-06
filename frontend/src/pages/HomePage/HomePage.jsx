@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 import TopNav from "../../components/TopNav/TopNav";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
-const HomePage = ({ handleInput, searchTerm, filteredFigures }) => {
+const HomePage = ({ handleInput, searchTerm, showFigures }) => {
   return (
     <div className="layout">
       <TopNav />
@@ -17,7 +17,7 @@ const HomePage = ({ handleInput, searchTerm, filteredFigures }) => {
           value={searchTerm}
           handleInput={handleInput}
         />
-        <Main filteredFigures={filteredFigures} />
+        <Main showFigures={showFigures} />
       </div>
       <Footer />
     </div>

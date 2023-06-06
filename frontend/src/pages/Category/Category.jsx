@@ -5,7 +5,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import Main from "../../components/Main/Main";
 import Footer from "../../components/Footer/Footer";
 
-const Dead = ({ handleInput, searchTerm, showFigures }) => {
+const Category = ({ handleInput, searchTerm, showFigures }) => {
   return (
     <div className="layout">
       <TopNav />
@@ -23,4 +23,4 @@ const Dead = ({ handleInput, searchTerm, showFigures }) => {
   );
 };
 
-export default Dead;
+export default Category;

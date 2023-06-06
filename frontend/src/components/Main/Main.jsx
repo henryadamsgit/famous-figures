@@ -1,24 +1,21 @@
 import React from "react";
 import "./Main.scss";
 import Card from "../Card/Card";
-import { NavLink } from "react-router-dom";
 
-const Main = ({ filteredFigures }) => {
-  return (
-    <div className="main">
-      {filteredFigures.map((figure) => (
-        <div key={figure.id}>
-          <NavLink
-            to={`/figures/${figure.id}`}
-            className="custom-link"
-            activeClassName="active"
-          >
-            <Card data={figure} />
-          </NavLink>
-        </div>
-      ))}
-    </div>
-  );
+const Main = ({ showFigures }) => {
+  let cards = null;
+  console.log(showFigures);
+
+  if (showFigures && Array.isArray(showFigures)) {
+    cards = showFigures.map((figure) => (
+      <Card key={figure.id} figure={figure} />
+    ));
+  } else {
+    // Handle the case when showFigures is not an array
+    cards = <p>No figures to display</p>;
+  }
+
+  return <div className="main">{cards}</div>;
 };
 
 export default Main;

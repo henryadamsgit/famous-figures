@@ -1,55 +1,128 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-import { useEffect, useState } from "react";
+import All from "./pages/All/All";
+import Category from "./pages/Category/Category";
+import Dead from "./pages/Dead/Dead";
+import Alive from "./pages/Alive/Alive";
 
 const App = () => {
+  const [showFigures, setShowFigures] = useState();
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredFigures, setFilteredFigures] = useState([]);
+
+  const location = useLocation();
 
   useEffect(() => {
-    getFigures(filteredFigures, searchTerm);
-  }, [filteredFigures, searchTerm]);
+    const fetchData = async () => {
+      const currentRoute = location.pathname;
 
-  const getFigures = async () => {
-    const url = "http://localhost:8080/figures/all";
-    let urlWithEndpoints = url;
-
-    try {
-      const response = await fetch(urlWithEndpoints);
-      const data = await response.json();
-      console.log(data);
-
-      if (searchTerm) {
-        const filteredData = data.filter((figure) =>
-          figure.name.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-        setFilteredFigures(filteredData);
-      } else {
-        setFilteredFigures(data);
+      switch (currentRoute) {
+        case "/category/:category":
+          await getFiguresByCategory();
+          break;
+        case "/alive":
+          await getAllAlive();
+          break;
+        case "/dead":
+          await getFiguresByDeathDate();
+          break;
+        default:
+          await getAllFigures();
+          break;
       }
+    };
 
-      // switch (urlWithEndpoints) {
-      //   case `${url}/all`:
-      //     console.log("All Figures:", data);
-      //     break;
-      //   case `${url}/{id}`:
-      //     console.log("Figure by ID:", data);
-      //     break;
-      //   case `${url}/random`:
-      //     console.log("Random Figure:", data);
-      //     break;
-      //   default:
-      //     break;
-      // }
-    } catch (error) {
-      console.error("Error:", error);
+    fetchData();
+  }, [location]);
+
+  const getAllFigures = async () => {
+    const url = "http://localhost:8080/all";
+    const result = await fetch(url);
+    const data = await result.json();
+    setShowFigures(data);
+  };
+
+  const getFigureById = async (id) => {
+    const url = `http://localhost:8080/${id}`;
+    const result = await fetch(url);
+    const data = await result.json();
+    setShowFigures(data);
+  };
+
+  const getFiguresByCategory = async (category) => {
+    const url = `http://localhost:8080/category/${category}`;
+    const result = await fetch(url);
+    const data = await result.json();
+    setShowFigures(data);
+  };
+
+  const getFiguresByDeathDate = async () => {
+    const url = "http://localhost:8080/dead";
+    const result = await fetch(url);
+    const data = await result.json();
+    setShowFigures(data);
+  };
+
+  const getAllAlive = async () => {
+    const url = "http://localhost:8080/alive";
+    const result = await fetch(url);
+    const data = await result.json();
+    setShowFigures(data);
+  };
+
+  const updateFigure = async (id, newFigure) => {
+    const url = `http://localhost:8080/${id}`;
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newFigure),
+    });
+    if (response.status === 204) {
+      // Figure updated successfully
+      const data = await response.json();
+      setShowFigures(data);
+    } else {
+      throw new Error("Failed to update figure");
+    }
+  };
+
+  const deleteFigureById = async (id) => {
+    const url = `http://localhost:8080/${id}`;
+    const response = await fetch(url, {
+      method: "DELETE",
+    });
+    if (response.status === 204) {
+      // Figure deleted successfully
+      const data = await response.json();
+      setShowFigures(data);
+    } else {
+      throw new Error("Failed to delete figure");
+    }
+  };
+
+  const createFigure = async (figure) => {
+    const url = "http://localhost:8080/figures";
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(figure),
+    });
+    if (response.status === 201) {
+      const data = await response.json();
+
+      setShowFigures(data);
+    } else {
+      throw new Error("Failed to create figure");
     }
   };
 
   const handleInput = (event) => {
-    const allInput = event.target.value.toLowerCase();
-    setSearchTerm(allInput);
+    setSearchTerm(event.target.value.toLowerCase());
   };
 
   return (
@@ -60,10 +133,15 @@ const App = () => {
           <HomePage
             handleInput={handleInput}
             searchTerm={searchTerm}
-            filteredFigures={filteredFigures}
+            showFigures={showFigures}
           />
         }
       />
+
+      <Route path="/category/:category" element={<Category />} />
+      <Route path="/all" element={<All />} />
+      <Route path="/dead" element={<Dead />} />
+      <Route path="/alive" element={<Alive />} />
     </Routes>
   );
 };
