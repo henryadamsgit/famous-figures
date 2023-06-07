@@ -6,9 +6,10 @@ import All from "./pages/All/All";
 import Category from "./pages/Category/Category";
 import Dead from "./pages/Dead/Dead";
 import Alive from "./pages/Alive/Alive";
+import CardMoreInfo from "./components/CardMoreInfo/CardMoreInfo";
 
 const App = () => {
-  const [showFigures, setShowFigures] = useState();
+  const [showFigures, setShowFigures] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   const location = useLocation();
@@ -176,6 +177,10 @@ const App = () => {
             handleInput={handleInput}
           />
         }
+      />
+      <Route
+        path="/figure/:name"
+        element={<CardMoreInfo showFigures={showFigures} />}
       />
     </Routes>
   );

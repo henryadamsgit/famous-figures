@@ -1,5 +1,6 @@
 import React from "react";
 import "./TopNav.scss";
+import { NavLink } from "react-router-dom";
 
 const TopNav = () => {
   return (
@@ -10,8 +11,9 @@ const TopNav = () => {
       <h3 className="title">Welcome To Famous Figures</h3>
       <div className="menu">
         <p>Home</p>
-        <p>About</p>
-        <p>Contact</p>
+        <NavLink>
+          <p>Customise</p>
+        </NavLink>
       </div>
     </div>
   );

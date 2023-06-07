@@ -35,3 +35,13 @@
   box-shadow: 0 4px 8px 0 black;
   transform: translateY(-5px);
 }
+
+.card__link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.card__link:hover {
+  text-decoration: none;
+}
