@@ -6,7 +6,7 @@ import TopNav from "../../components/TopNav/TopNav";
 import { useParams } from "react-router-dom";
 import HomeButton from "../HomeButton/HomeButton";
 
-const CardMoreInfo = ({ handleInput, showFigures }) => {
+const CardMoreInfo = ({ showFigures }) => {
   const { name } = useParams();
   const figure = showFigures.find((figure) => figure.name === name);
   return (
@@ -24,7 +24,7 @@ const CardMoreInfo = ({ handleInput, showFigures }) => {
                 alt="figure-img"
               />
               <p className="moreInfo__bio">Biography: {figure.biography}</p>
-              <HomeButton>Return</HomeButton>
+              <HomeButton className="moreInfo__return">Return</HomeButton>
             </>
           )}
         </section>

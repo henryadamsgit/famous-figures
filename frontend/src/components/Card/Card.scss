@@ -3,6 +3,7 @@
 }
 
 .figure {
+  position: relative;
   box-sizing: border-box;
   width: 170px;
   height: 170px;
@@ -10,6 +11,7 @@
   border: 2px solid rgb(255, 208, 0);
   border-radius: 10px;
   background-color: #f1f0f0;
+  overflow: hidden;
 
   &__name {
     text-align: center;
@@ -29,11 +31,29 @@
     margin-top: auto;
     border: 2px solid black;
   }
-}
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 
-.card:hover {
-  box-shadow: 0 4px 8px 0 black;
-  transform: translateY(-5px);
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__overlay-text {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
 
 .card__link {

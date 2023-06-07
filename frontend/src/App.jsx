@@ -7,6 +7,7 @@ import Category from "./pages/Category/Category";
 import Dead from "./pages/Dead/Dead";
 import Alive from "./pages/Alive/Alive";
 import CardMoreInfo from "./components/CardMoreInfo/CardMoreInfo";
+import CreateFigure from "./pages/CreateFigure/CreateFigure";
 
 const App = () => {
   const [showFigures, setShowFigures] = useState([]);
@@ -182,6 +183,8 @@ const App = () => {
         path="/figure/:name"
         element={<CardMoreInfo showFigures={showFigures} />}
       />
+
+      <Route path="/customise" element={<CreateFigure />} />
     </Routes>
   );
 };

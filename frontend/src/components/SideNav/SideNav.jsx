@@ -89,6 +89,19 @@ const SideNav = () => {
         </NavLink>
         <img className="SideNav--line" src={Line} id="line1" alt="line" />
         <img className="SideNav--line" src={Line} id="line1" alt="line" />
+
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          to="/customise"
+          style={{ textDecoration: "none" }}
+        >
+          <NavItem name="Customise" />
+        </NavLink>
+
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
+        <img className="SideNav--line" src={Line} id="line1" alt="line" />
       </section>
     </>
   );
