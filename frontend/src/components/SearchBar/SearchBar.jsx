@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.scss";
 
-const SearchBar = ({ value, handleInput }) => {
+const SearchBar = ({ handleInput, searchTerm }) => {
   return (
     <form action="" className="search-bar">
       <input
@@ -9,8 +9,8 @@ const SearchBar = ({ value, handleInput }) => {
         name="search"
         pattern=".*\S.*"
         required
-        value={value}
         onChange={handleInput}
+        searchTerm={searchTerm}
       />
       <button className="search-btn" type="submit">
         <span>Search</span>

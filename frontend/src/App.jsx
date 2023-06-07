@@ -14,27 +14,27 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const currentRoute = location.pathname;
-
-      switch (currentRoute) {
-        case "/category/:category":
-          await getFiguresByCategory();
-          break;
-        case "/alive":
-          await getAllAlive();
-          break;
-        case "/dead":
-          await getFiguresByDeathDate();
-          break;
-        default:
-          await getAllFigures();
-          break;
-      }
-    };
-
     fetchData();
   }, [location]);
+
+  const fetchData = async () => {
+    const currentRoute = location.pathname;
+
+    switch (currentRoute) {
+      case "/category/:category":
+        await getFiguresByCategory();
+        break;
+      case "/alive":
+        await getAllAlive();
+        break;
+      case "/dead":
+        await getFiguresByDeathDate();
+        break;
+      default:
+        await getAllFigures();
+        break;
+    }
+  };
 
   const getAllFigures = async () => {
     const url = "http://localhost:8080/all";
@@ -81,7 +81,6 @@ const App = () => {
       body: JSON.stringify(newFigure),
     });
     if (response.status === 204) {
-      // Figure updated successfully
       const data = await response.json();
       setShowFigures(data);
     } else {
@@ -95,7 +94,6 @@ const App = () => {
       method: "DELETE",
     });
     if (response.status === 204) {
-      // Figure deleted successfully
       const data = await response.json();
       setShowFigures(data);
     } else {
@@ -122,7 +120,8 @@ const App = () => {
   };
 
   const handleInput = (event) => {
-    setSearchTerm(event.target.value.toLowerCase());
+    const allInput = event.target.value.toLowerCase();
+    setSearchTerm(allInput);
   };
 
   return (
@@ -138,10 +137,46 @@ const App = () => {
         }
       />
 
-      <Route path="/category/:category" element={<Category />} />
-      <Route path="/all" element={<All />} />
-      <Route path="/dead" element={<Dead />} />
-      <Route path="/alive" element={<Alive />} />
+      <Route
+        path="/category"
+        element={
+          <Category
+            showFigures={showFigures}
+            searchTerm={searchTerm}
+            handleInput={handleInput}
+          />
+        }
+      />
+      <Route
+        path="/all"
+        element={
+          <All
+            showFigures={showFigures}
+            searchTerm={searchTerm}
+            handleInput={handleInput}
+          />
+        }
+      />
+      <Route
+        path="/dead"
+        element={
+          <Dead
+            showFigures={showFigures}
+            searchTerm={searchTerm}
+            handleInput={handleInput}
+          />
+        }
+      />
+      <Route
+        path="/alive"
+        element={
+          <Alive
+            showFigures={showFigures}
+            searchTerm={searchTerm}
+            handleInput={handleInput}
+          />
+        }
+      />
     </Routes>
   );
 };

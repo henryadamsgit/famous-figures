@@ -14,10 +14,13 @@ const HomePage = ({ handleInput, searchTerm, showFigures }) => {
       <div className="container">
         <SearchBar
           label="Search for your favourite Famous Figure!"
-          value={searchTerm}
           handleInput={handleInput}
         />
-        <Main showFigures={showFigures} />
+        <Main
+          showFigures={showFigures}
+          handleInput={handleInput}
+          searchTerm={searchTerm}
+        />
       </div>
       <Footer />
     </div>

@@ -13,10 +13,10 @@ const Dead = ({ handleInput, searchTerm, showFigures }) => {
       <div className="container">
         <SearchBar
           label="Search for your favourite Famous Figure!"
-          value={searchTerm}
+          searchTerm={searchTerm}
           handleInput={handleInput}
         />
-        <Main showFigures={showFigures} />
+        <Main showFigures={showFigures} searchTerm={searchTerm} />
       </div>
       <Footer />
     </div>

@@ -2,17 +2,25 @@ import React from "react";
 import "./Main.scss";
 import Card from "../Card/Card";
 
-const Main = ({ showFigures }) => {
-  let cards = null;
-  console.log(showFigures);
+const Main = ({ showFigures, searchTerm }) => {
+  let filteredFigures = [];
 
   if (showFigures && Array.isArray(showFigures)) {
-    cards = showFigures.map((figure) => (
+    filteredFigures = showFigures.filter((figure) =>
+      figure.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }
+
+  let cards = null;
+
+  if (filteredFigures.length > 0) {
+    cards = filteredFigures.map((figure) => (
       <Card key={figure.id} figure={figure} />
     ));
+  } else if (showFigures === undefined) {
+    cards = <p>Loading...</p>;
   } else {
-    // Handle the case when showFigures is not an array
-    cards = <p>No figures to display</p>;
+    cards = <p>No figures found.</p>;
   }
 
   return <div className="main">{cards}</div>;
