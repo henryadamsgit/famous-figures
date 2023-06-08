@@ -7,6 +7,7 @@ import TopNav from "../../components/TopNav/TopNav";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
 const CategorySport = ({ handleInput, searchTerm, showFigures }) => {
+  console.log(showFigures);
   return (
     <div className="layout">
       <TopNav />

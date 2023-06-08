@@ -1,13 +1,15 @@
 .containerr {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding-top: 360px;
+  padding-left: 230px;
+  gap: 60px;
 }
 
 .box {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 140px;
   background-color: #f1f1f1;
   border-radius: 5px;
   display: flex;

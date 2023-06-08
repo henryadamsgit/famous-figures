@@ -12,19 +12,19 @@ const Category = ({ handleInput, searchTerm, showFigures }) => {
       <SideNav />
       <div className="containerr">
         <div className="box sport">
-          <NavLink to="/sport">Sport</NavLink>
+          <NavLink to="/category/sport">Sport🏅</NavLink>
         </div>
         <div className="box literature">
-          <NavLink to="/literature">Literature</NavLink>
+          <NavLink to="/category/literature">Writing📚</NavLink>
         </div>
         <div className="box science">
-          <NavLink to="/science">Science</NavLink>
+          <NavLink to="/category/science">Science🧪</NavLink>
         </div>
         <div className="box politics">
-          <NavLink to="/politics">Politics</NavLink>
+          <NavLink to="/category/politics">Politics🗳️</NavLink>
         </div>
         <div className="box music">
-          <NavLink to="/music">Music</NavLink>
+          <NavLink to="/category/music">Music🎵</NavLink>
         </div>
       </div>
       <Footer />

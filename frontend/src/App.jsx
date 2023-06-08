@@ -20,6 +20,8 @@ const App = () => {
 
   const location = useLocation();
 
+  console.log(location);
+  console.log(showFigures);
   useEffect(() => {
     fetchData();
   }, [location]);
@@ -28,8 +30,20 @@ const App = () => {
     const currentRoute = location.pathname;
 
     switch (currentRoute) {
-      case "/category/:category":
-        await getFiguresByCategory();
+      case "/category/sports":
+        await getFiguresByCategory("Sports");
+        break;
+      case "/category/literature":
+        await getFiguresByCategory("Literature");
+        break;
+      case "/category/science":
+        await getFiguresByCategory("Science");
+        break;
+      case "/category/politics":
+        await getFiguresByCategory("Politics");
+        break;
+      case "/category/music":
+        await getFiguresByCategory("Music");
         break;
       case "/alive":
         await getAllAlive();
@@ -58,6 +72,7 @@ const App = () => {
   };
 
   const getFiguresByCategory = async (category) => {
+    console.log("is getting here");
     const url = `http://localhost:8080/category/${category}`;
     const result = await fetch(url);
     const data = await result.json();
@@ -156,7 +171,7 @@ const App = () => {
       />
 
       <Route
-        path="/sport"
+        path="/category/sport"
         element={
           <CategorySport
             showFigures={showFigures}
@@ -166,7 +181,7 @@ const App = () => {
         }
       />
       <Route
-        path="/literature"
+        path="/category/literature"
         element={
           <CategoryLiterature
             showFigures={showFigures}
@@ -176,7 +191,7 @@ const App = () => {
         }
       />
       <Route
-        path="/science"
+        path="/category/science"
         element={
           <CategoryScience
             showFigures={showFigures}
@@ -186,7 +201,7 @@ const App = () => {
         }
       />
       <Route
-        path="/politics"
+        path="/category/politics"
         element={
           <CategoryPolitics
             showFigures={showFigures}
@@ -197,7 +212,7 @@ const App = () => {
       />
 
       <Route
-        path="/music"
+        path="/category/music"
         element={
           <CategoryMusic
             showFigures={showFigures}

@@ -9,7 +9,7 @@ const HomeButton = () => {
   };
 
   return (
-    <button className="moreInfo__button" onClick={handleReturnClick}>
+    <button className="returnHome__button" onClick={handleReturnClick}>
       Return Home
     </button>
   );

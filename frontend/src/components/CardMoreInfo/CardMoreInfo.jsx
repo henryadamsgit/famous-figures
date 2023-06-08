@@ -25,6 +25,10 @@ const CardMoreInfo = ({ showFigures }) => {
               />
               <p className="moreInfo__bio">Biography: {figure.biography}</p>
               <HomeButton className="moreInfo__return">Return</HomeButton>
+              <div class="moreInfo__buttons">
+                <button class="moreInfo__update">Update</button>
+                <button class="moreInfo__delete">Delete</button>
+              </div>
             </>
           )}
         </section>
