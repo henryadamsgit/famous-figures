@@ -1,12 +1,12 @@
 import React from "react";
-import "./CategorySport.scss";
+import "./CategoryPolitics.scss";
 import Main from "../../components/Main/Main";
 import SideNav from "../../components/SideNav/SideNav";
 import Footer from "../../components/Footer/Footer";
 import TopNav from "../../components/TopNav/TopNav";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
-const CategorySport = ({ handleInput, searchTerm, showFigures }) => {
+const CategoryPolitics = ({ handleInput, searchTerm, showFigures }) => {
   return (
     <div className="layout">
       <TopNav />
@@ -27,4 +27,4 @@ const CategorySport = ({ handleInput, searchTerm, showFigures }) => {
   );
 };
 
-export default CategorySport;
+export default CategoryPolitics;

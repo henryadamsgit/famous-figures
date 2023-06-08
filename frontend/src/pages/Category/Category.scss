@@ -1,0 +1,44 @@
+.containerr {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 360px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.box a {
+  text-decoration: none;
+  color: #333;
+}
+
+.box.sport {
+  background-color: #ffcccc;
+}
+
+.box.literature {
+  background-color: #ccffcc;
+}
+
+.box.science {
+  background-color: #ccccff;
+}
+
+.box.politics {
+  background-color: #ffffcc;
+}
+
+.box.music {
+  background-color: #ffccff;
+}

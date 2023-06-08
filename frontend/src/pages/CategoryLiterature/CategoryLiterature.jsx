@@ -1,9 +1,30 @@
-import React from 'react'
+import React from "react";
+import "./CategoryLiterature.scss";
+import Main from "../../components/Main/Main";
+import SideNav from "../../components/SideNav/SideNav";
+import Footer from "../../components/Footer/Footer";
+import TopNav from "../../components/TopNav/TopNav";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
-const CategoryLiterature = () => {
+const CategoryLiterature = ({ handleInput, searchTerm, showFigures }) => {
   return (
-    <div>CategoryLiterature</div>
-  )
-}
+    <div className="layout">
+      <TopNav />
+      <SideNav />
+      <div className="container">
+        <SearchBar
+          label="Search for your favourite Famous Figure!"
+          handleInput={handleInput}
+        />
+        <Main
+          showFigures={showFigures}
+          handleInput={handleInput}
+          searchTerm={searchTerm}
+        />
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
-export default CategoryLiterature
+export default CategoryLiterature;

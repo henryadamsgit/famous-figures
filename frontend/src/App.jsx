@@ -8,6 +8,11 @@ import Dead from "./pages/Dead/Dead";
 import Alive from "./pages/Alive/Alive";
 import CardMoreInfo from "./components/CardMoreInfo/CardMoreInfo";
 import CreateFigure from "./pages/CreateFigure/CreateFigure";
+import CategorySport from "./pages/CategorySport/CategorySport";
+import CategoryLiterature from "./pages/CategoryLiterature/CategoryLiterature";
+import CategoryScience from "./pages/CategoryScience/CategoryScience";
+import CategoryPolitics from "./pages/CategoryPolitics/CategoryPolitics";
+import CategoryMusic from "./pages/CategoryMusic/CategoryMusic";
 
 const App = () => {
   const [showFigures, setShowFigures] = useState([]);
@@ -140,7 +145,7 @@ const App = () => {
       />
 
       <Route
-        path="/category"
+        path="/category/:category"
         element={
           <Category
             showFigures={showFigures}
@@ -149,6 +154,59 @@ const App = () => {
           />
         }
       />
+
+      <Route
+        path="/sport"
+        element={
+          <CategorySport
+            showFigures={showFigures}
+            searchTerm={searchTerm}
+            handleInput={handleInput}
+          />
+        }
+      />
+      <Route
+        path="/literature"
+        element={
+          <CategoryLiterature
+            showFigures={showFigures}
+            searchTerm={searchTerm}
+            handleInput={handleInput}
+          />
+        }
+      />
+      <Route
+        path="/science"
+        element={
+          <CategoryScience
+            showFigures={showFigures}
+            searchTerm={searchTerm}
+            handleInput={handleInput}
+          />
+        }
+      />
+      <Route
+        path="/politics"
+        element={
+          <CategoryPolitics
+            showFigures={showFigures}
+            searchTerm={searchTerm}
+            handleInput={handleInput}
+          />
+        }
+      />
+
+      <Route
+        path="/music"
+        element={
+          <CategoryMusic
+            showFigures={showFigures}
+            searchTerm={searchTerm}
+            handleInput={handleInput}
+          />
+        }
+      />
+
       <Route
         path="/all"
         element={

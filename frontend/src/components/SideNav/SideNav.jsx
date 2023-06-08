@@ -56,19 +56,6 @@ const SideNav = () => {
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
-          to="/era"
-          style={{ textDecoration: "none" }}
-        >
-          <NavItem name="By Era" />
-        </NavLink>
-
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
           to="/alive"
           style={{ textDecoration: "none" }}
         >
