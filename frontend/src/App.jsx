@@ -51,6 +51,8 @@ const App = () => {
       case "/dead":
         await getFiguresByDeathDate();
         break;
+      case "/customise":
+        await createFigure();
       default:
         await getAllFigures();
         break;

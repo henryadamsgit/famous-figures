@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import NavItem from "../NavItem/NavItem";
 import "./SideNav.scss";
-import Line from "../../assets/images/nav-line.svg";
 
 const SideNav = () => {
   return (
@@ -10,10 +9,8 @@ const SideNav = () => {
         <div className="logo-container"></div>
         <div className="menu"></div>
 
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-
         <NavLink
+          activeClassName="active"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
@@ -21,12 +18,11 @@ const SideNav = () => {
           style={{ textDecoration: "none" }}
         >
           <NavItem name="Home" />
+          <div className="SideNav--Line"></div>
         </NavLink>
 
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-
         <NavLink
+          activeClassName="active"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
@@ -34,12 +30,11 @@ const SideNav = () => {
           style={{ textDecoration: "none" }}
         >
           <NavItem name="All Figures" />
+          <div className="SideNav--Line"></div>
         </NavLink>
 
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-
         <NavLink
+          activeClassName="active"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
@@ -47,12 +42,11 @@ const SideNav = () => {
           style={{ textDecoration: "none" }}
         >
           <NavItem name="By Category" />
+          <div className="SideNav--Line"></div>
         </NavLink>
 
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-
         <NavLink
+          activeClassName="active"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
@@ -60,12 +54,11 @@ const SideNav = () => {
           style={{ textDecoration: "none" }}
         >
           <NavItem name="Alive" />
+          <div className="SideNav--Line"></div>
         </NavLink>
 
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-
         <NavLink
+          activeClassName="active"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
@@ -73,11 +66,11 @@ const SideNav = () => {
           style={{ textDecoration: "none" }}
         >
           <NavItem name="Dead" />
+          <div className="SideNav--Line"></div>
         </NavLink>
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
 
         <NavLink
+          activeClassName="active"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
@@ -85,10 +78,8 @@ const SideNav = () => {
           style={{ textDecoration: "none" }}
         >
           <NavItem name="Customise" />
+          <div className="SideNav--Line"></div>
         </NavLink>
-
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
-        <img className="SideNav--line" src={Line} id="line1" alt="line" />
       </section>
     </>
   );

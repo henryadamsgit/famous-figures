@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .SideNav {
   background-color: black;
   color: white;
@@ -21,6 +23,18 @@
   color: white;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 40px; /* Increase the value for more spacing */
+  display: flex;
+  align-items: center; /* Align the lines vertically with the subheadings */
+  position: relative; /* Relative positioning for lines */
+}
+
+.SideNav a .NavItem {
+  padding: 10px;
+  margin-left: 30px; /* Add margin to match the padding-left in .navItem */
+  font-family: $font-subheading;
+  font-weight: 1000;
+  font-size: 22px;
 }
 
 .SideNav a:hover {
@@ -29,9 +43,21 @@
 }
 
 .SideNav--Line {
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-top: 22px;
-  position: absolute;
   background-color: rgb(255, 208, 0);
+  width: calc(
+    100% - 60px
+  ); /* Adjust the width to match the padding and margin */
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 30px; /* Adjust the left value to match the margin-left in .navItem */
+}
+
+.SideNav a.active {
+  background-color: rgb(
+    255,
+    208,
+    0
+  ); /* Apply yellow background for active subheading */
+  color: black;
 }
