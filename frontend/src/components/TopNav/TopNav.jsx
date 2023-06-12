@@ -7,7 +7,7 @@ const TopNav = () => {
       <div className="logo">
         <h2>FF</h2>
       </div>
-      <h3 className="title">Welcome To Famous Figures</h3>
+      <h3 className="title">Famous Figures</h3>
       <div className="menu">
         <p>Menu</p>
       </div>

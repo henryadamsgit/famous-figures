@@ -23,7 +23,7 @@ const CardMoreInfo = ({ showFigures }) => {
                 src={figure.image_url}
                 alt="figure-img"
               />
-              <p className="moreInfo__bio">Biography: {figure.biography}</p>
+              <p className="moreInfo__bio">{figure.biography}</p>
               <HomeButton className="moreInfo__return">Return</HomeButton>
               <div class="moreInfo__buttons">
                 <button class="moreInfo__update">Update</button>
