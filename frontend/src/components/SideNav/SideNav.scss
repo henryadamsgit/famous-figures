@@ -25,7 +25,7 @@
   color: white;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: 20px;
+  margin-top: 0px;
   display: flex;
   align-items: center; /* Align the lines vertically with the subheadings */
   position: relative; /* Relative positioning for lines */
@@ -36,7 +36,7 @@
   margin-left: 30px; /* Add margin to match the padding-left in .navItem */
   font-family: $font-subheading;
   font-weight: 1000;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .SideNav a:hover {

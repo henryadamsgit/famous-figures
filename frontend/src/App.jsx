@@ -20,7 +20,6 @@ const App = () => {
 
   const location = useLocation();
 
-  
   useEffect(() => {
     fetchData();
   }, [location]);
@@ -86,7 +85,7 @@ const App = () => {
   };
 
   const createFigure = async (figure) => {
-    const url = "http://localhost:8080/figures";
+    const url = "http://localhost:8080/customise";
     const response = await fetch(url, {
       method: "POST",
       headers: {

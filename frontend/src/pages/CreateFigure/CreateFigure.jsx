@@ -6,6 +6,7 @@ import TopNav from "../../components/TopNav/TopNav";
 
 const CreateFigure = ({ createFigure }) => {
   const [name, setName] = useState("");
+  const [id, setId] = useState("");
   const [category, setCategory] = useState("");
   const [dob, setDob] = useState("");
   const [dod, setDod] = useState("");
@@ -16,6 +17,7 @@ const CreateFigure = ({ createFigure }) => {
     event.preventDefault();
     const figureData = {
       name,
+      id,
       category,
       dob,
       dod,
@@ -47,6 +49,17 @@ const CreateFigure = ({ createFigure }) => {
             </div>
 
             <div className="newFigure__form-group">
+              <label htmlFor="name">ID: (&gt; 110)</label>
+              <input
+                type="text"
+                id="id"
+                name="id"
+                value={id}
+                onChange={(event) => setId(event.target.value)}
+              />
+            </div>
+
+            <div className="newFigure__form-group">
               <label htmlFor="category">CATEGORY:</label>
               <input
                 type="text"
@@ -58,7 +71,7 @@ const CreateFigure = ({ createFigure }) => {
             </div>
 
             <div className="newFigure__form-group">
-              <label htmlFor="dob">DOB:</label>
+              <label htmlFor="dob">DATE OF BIRTH:</label>
               <input
                 type="text"
                 id="dob"
@@ -69,7 +82,7 @@ const CreateFigure = ({ createFigure }) => {
             </div>
 
             <div className="newFigure__form-group">
-              <label htmlFor="dod">DOD:</label>
+              <label htmlFor="dod">DATE OF DEATH:</label>
               <input
                 type="text"
                 id="dod"
@@ -91,7 +104,7 @@ const CreateFigure = ({ createFigure }) => {
             </div>
 
             <div className="newFigure__form-group">
-              <label htmlFor="bio">BIO:</label>
+              <label htmlFor="bio">BIOGRAPHY:</label>
               <textarea
                 id="bio"
                 name="bio"

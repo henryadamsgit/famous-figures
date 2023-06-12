@@ -16,11 +16,6 @@ const HomePage = ({ handleInput, searchTerm, showFigures }) => {
           label="Search for your favourite Famous Figure!"
           handleInput={handleInput}
         />
-        <Main
-          showFigures={showFigures}
-          handleInput={handleInput}
-          searchTerm={searchTerm}
-        />
       </div>
       <Footer />
     </div>
