@@ -6,7 +6,8 @@
 .main {
   margin-top: 80px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
-  margin-left: 20px;
+  margin-left: 100px;
+  position: relative;
 }

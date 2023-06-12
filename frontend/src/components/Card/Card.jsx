@@ -14,8 +14,8 @@ const Card = ({ figure }) => {
           <div className="figure__overlay">
             <p className="figure__overlay-text">More Info</p>
           </div>
-          <img className="figure__image" src={imageUrl} alt="figure-image" />
           <h3 className="figure__name">{figure.name}</h3>
+          <p className="figure__category">{figure.category}</p>
         </div>
       </NavLink>
     </div>

@@ -20,8 +20,7 @@ const App = () => {
 
   const location = useLocation();
 
-  console.log(location);
-  console.log(showFigures);
+  
   useEffect(() => {
     fetchData();
   }, [location]);
@@ -30,7 +29,7 @@ const App = () => {
     const currentRoute = location.pathname;
 
     switch (currentRoute) {
-      case "/category/sports":
+      case "/category/sport":
         await getFiguresByCategory("Sports");
         break;
       case "/category/literature":
@@ -51,8 +50,6 @@ const App = () => {
       case "/dead":
         await getFiguresByDeathDate();
         break;
-      case "/customise":
-        await createFigure();
       default:
         await getAllFigures();
         break;
@@ -61,13 +58,6 @@ const App = () => {
 
   const getAllFigures = async () => {
     const url = "http://localhost:8080/all";
-    const result = await fetch(url);
-    const data = await result.json();
-    setShowFigures(data);
-  };
-
-  const getFigureById = async (id) => {
-    const url = `http://localhost:8080/${id}`;
     const result = await fetch(url);
     const data = await result.json();
     setShowFigures(data);
@@ -93,6 +83,24 @@ const App = () => {
     const result = await fetch(url);
     const data = await result.json();
     setShowFigures(data);
+  };
+
+  const createFigure = async (figure) => {
+    const url = "http://localhost:8080/figures";
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(figure),
+    });
+    if (response.status === 201) {
+      const data = await response.json();
+
+      setShowFigures(data);
+    } else {
+      throw new Error("Failed to create figure");
+    }
   };
 
   const updateFigure = async (id, newFigure) => {
@@ -125,22 +133,11 @@ const App = () => {
     }
   };
 
-  const createFigure = async (figure) => {
-    const url = "http://localhost:8080/figures";
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(figure),
-    });
-    if (response.status === 201) {
-      const data = await response.json();
-
-      setShowFigures(data);
-    } else {
-      throw new Error("Failed to create figure");
-    }
+  const getFigureById = async (id) => {
+    const url = `http://localhost:8080/${id}`;
+    const result = await fetch(url);
+    const data = await result.json();
+    setShowFigures(data);
   };
 
   const handleInput = (event) => {
@@ -259,7 +256,10 @@ const App = () => {
         element={<CardMoreInfo showFigures={showFigures} />}
       />
 
-      <Route path="/customise" element={<CreateFigure />} />
+      <Route
+        path="/customise"
+        element={<CreateFigure createFigure={createFigure} />}
+      />
     </Routes>
   );
 };
