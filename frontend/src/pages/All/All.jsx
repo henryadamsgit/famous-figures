@@ -4,6 +4,7 @@ import SideNav from "../../components/SideNav/SideNav";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Main from "../../components/Main/Main";
 import Footer from "../../components/Footer/Footer";
+import ScrollButton from "../../components/ScrollButton/ScrollButton";
 
 const All = ({ handleInput, searchTerm, showFigures }) => {
   return (
@@ -17,6 +18,7 @@ const All = ({ handleInput, searchTerm, showFigures }) => {
           handleInput={handleInput}
         />
         <Main showFigures={showFigures} searchTerm={searchTerm} />
+        <ScrollButton />
       </div>
       <Footer />
     </div>

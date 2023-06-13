@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .footer {
   background-color: rgb(255, 208, 0);
   color: black;
@@ -14,6 +16,7 @@
 
 .footer__name {
   font-size: 16px;
+  font-family: $font-subheading;
 }
 
 .footer__socials {
@@ -26,18 +29,15 @@
 }
 
 .footer__socials a:hover {
+  color: #3d3d3d;
+}
+
+.footer__icon {
+  color: black;
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.footer__icon:hover {
   color: #999999;
-}
-
-.footer__socials i {
-  margin-right: 5px;
-}
-.linkedin {
-  color: white;
-  position: absolute;
-}
-
-.github {
-  color: white;
-  position: absolute;
 }

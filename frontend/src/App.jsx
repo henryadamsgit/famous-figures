@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Route, Routes } from "react-router-dom";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import HomePage from "./pages/HomePage/HomePage";
 import All from "./pages/All/All";
 import Category from "./pages/Category/Category";
@@ -13,10 +14,20 @@ import CategoryLiterature from "./pages/CategoryLiterature/CategoryLiterature";
 import CategoryScience from "./pages/CategoryScience/CategoryScience";
 import CategoryPolitics from "./pages/CategoryPolitics/CategoryPolitics";
 import CategoryMusic from "./pages/CategoryMusic/CategoryMusic";
+import WelcomePage from "./pages/WelcomePage/WelcomePage";
 
 const App = () => {
+  const [enteredSite, setEnteredSite] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [showFigures, setShowFigures] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const handleEnterSite = (firstName, lastName) => {
+    setFirstName(firstName);
+    setLastName(lastName);
+    setEnteredSite(true);
+  };
 
   const location = useLocation();
 
@@ -49,8 +60,10 @@ const App = () => {
       case "/dead":
         await getFiguresByDeathDate();
         break;
-      default:
+      case "/all":
         await getAllFigures();
+        break;
+      default:
         break;
     }
   };
@@ -146,16 +159,25 @@ const App = () => {
 
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <HomePage
-            handleInput={handleInput}
-            searchTerm={searchTerm}
-            showFigures={showFigures}
-          />
-        }
-      />
+      {enteredSite ? (
+        <Route
+          path="/home"
+          element={
+            <HomePage
+              handleInput={handleInput}
+              searchTerm={searchTerm}
+              showFigures={showFigures}
+              firstName={firstName}
+              lastName={lastName}
+            />
+          }
+        />
+      ) : (
+        <Route
+          path="/"
+          element={<WelcomePage onEnterSite={handleEnterSite} />}
+        />
+      )}
 
       <Route
         path="/category/:category"
