@@ -1,6 +1,6 @@
 # full-stack-project
 
-![Alt Text](images/Screenshot%202023-06-15%20at%2018.46.24.png)
+![Famous Figures Image](image.png)
 
 In this project I have built an online encyclopedia of famous figures, using all of my knowledge and skills of development. Famous Figures is a comprehensive web application that serves as a repository of notable individuals.
 
