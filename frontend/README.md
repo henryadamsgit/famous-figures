@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+![Alt Text](images/Screenshot%202023-06-15%20at%2018.46.24.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project I have built an online encyclopedia of famous figures, using all of my knowledge and skills of development. Famous Figures is a comprehensive web application that serves as a repository of notable individuals.
 
-## Available Scripts
+-- Technology Stack --
+MySQL: The project utilizes MySQL as the database management system. The database was created from scratch, incorporating data collected from reliable sources on the internet. It contains over 100 famous figures, each with associated attributes such as images, descriptions, and dates of birth.
 
-In the project directory, you can run:
+Spring Boot: The Spring Boot framework was employed to facilitate seamless integration between the backend and the database. By utilizing Spring Boot's powerful features and functionalities, the project achieved efficient API integration, enabling smooth data retrieval and manipulation.
 
-### `npm start`
+Java: Java, a versatile and robust programming language, was utilized for the backend logic of the application. It played a crucial role in implementing the business logic and handling the interactions with the database. The application follows the Model-View-Controller (MVC) architectural pattern, ensuring clear separation of concerns and maintainability.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React/JS/Sass: The frontend of the Online Encyclopedia of Famous Figures was developed using React, JavaScript, and Sass. These technologies were employed to create a dynamic and engaging user interface. React, being a popular JavaScript library, facilitated the rendering of data obtained from the backend API. Numerous components and pages were designed and implemented to provide users with an immersive and user-friendly experience. Asynchronous operations were handled using modern techniques like async/await functions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+--Features--
+Database: The project incorporates a MySQL database containing a vast collection of famous figures, each with detailed information, including name, category, images, biography, and dates of birth/death. The database was meticulously designed to ensure efficient data storage and retrieval.
 
-### `npm test`
+API Integration: Spring Boot enables seamless integration with the database through well-defined API endpoints. These endpoints allow for querying and filtering data based on user requirements, ensuring a responsive and interactive user experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Backend Logic: The Java backend handles the business logic of the application, including data processing, filtering, and retrieval from the database. Spring annotations are extensively used to simplify development, enhance code readability, and ensure adherence to best practices.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Frontend Development: The frontend of the application is built using React, JavaScript, and Sass. React components were modularly designed to enhance reusability and maintainability. Asynchronous operations were efficiently managed using modern JavaScript techniques like async/await, ensuring a smooth and responsive user interface.
