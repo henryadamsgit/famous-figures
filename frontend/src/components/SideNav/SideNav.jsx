@@ -14,7 +14,7 @@ const SideNav = () => {
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
-          to="/"
+          to="/home"
           style={{ textDecoration: "none" }}
         >
           <NavItem name="Home" />

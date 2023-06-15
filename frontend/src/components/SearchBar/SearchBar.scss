@@ -157,3 +157,37 @@
 //     background: #f1f1f1;
 //   }
 // }
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-bar input[type="search"] {
+  padding: 10px;
+  border: 2px solid rgb(255, 208, 0);
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-bar .search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: rgb(255, 208, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-left: 10px;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar .search-btn:hover {
+  background-color: rgb(255, 208, 0);
+  color: black;
+}

@@ -5,12 +5,12 @@ const HomeButton = () => {
   const navigate = useNavigate();
 
   const handleReturnClick = () => {
-    navigate("/all");
+    navigate(-1);
   };
 
   return (
     <button className="returnHome__button" onClick={handleReturnClick}>
-      Back
+      Go Back
     </button>
   );
 };

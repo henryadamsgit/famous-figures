@@ -14,13 +14,15 @@ const HomePage = ({
   lastName,
 }) => {
   const [message, setMessage] = useState("");
+  console.log(firstName, lastName);
 
   useEffect(() => {
     if (firstName && lastName) {
       setMessage(
-        `Welcome, ${firstName} ${lastName}! You have entered Famous Figures!.`
+        `Welcome, ${firstName} ${lastName}! You have entered Famous Figures!`
       );
     }
+    console.log(message);
   }, [firstName, lastName]);
 
   return (

@@ -76,7 +76,6 @@ const App = () => {
   };
 
   const getFiguresByCategory = async (category) => {
-    console.log("is getting here");
     const url = `http://localhost:8080/category/${category}`;
     const result = await fetch(url);
     const data = await result.json();
@@ -175,7 +174,7 @@ const App = () => {
       ) : (
         <Route
           path="/"
-          element={<WelcomePage onEnterSite={handleEnterSite} />}
+          element={<WelcomePage handleEnterSite={handleEnterSite} />}
         />
       )}
 

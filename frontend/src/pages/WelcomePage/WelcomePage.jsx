@@ -2,6 +2,7 @@ import React from "react";
 import "./WelcomePage.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { NavLink } from "react-router-dom";
 
 const WelcomePage = ({
   firstName,
@@ -9,6 +10,7 @@ const WelcomePage = ({
   handleFirstNameChange,
   handleLastNameChange,
   handleSubmit,
+  handleEnterSite,
 }) => {
   return (
     <div className="welcome">
@@ -35,9 +37,15 @@ const WelcomePage = ({
           />
         </label>
         <br />
-        <button className="welcome-button" type="submit">
-          Enter
-        </button>
+        <NavLink to="/home">
+          <button
+            className="welcome-button"
+            type="submit"
+            onClick={() => handleEnterSite(firstName, lastName)}
+          >
+            Enter
+          </button>
+        </NavLink>
       </form>
       <footer className="welcome-footer">
         <div className="welcome-name">Designed By Henry Adams &#169;</div>
