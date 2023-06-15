@@ -1,6 +1,6 @@
 ![Famous Figures](frontend/images/Screenshot%202023-06-15%20at%2018.46.24.png)
 
-In this project I have built an online encyclopedia of famous figures, using all of my knowledge and skills of development. Famous Figures is a comprehensive web application that serves as a repository of notable individuals.
+In this project I have built an online encyclopedia of famous figures, using all of my knowledge and skills of development. Famous Figures is a comprehensive web application that serves as a repository of notable individuals. 
 
 -- Technology Stack --
 MySQL: The project utilizes MySQL as the database management system. The database was created from scratch, incorporating data collected from reliable sources on the internet. It contains over 100 famous figures, each with associated attributes such as images, descriptions, and dates of birth.
